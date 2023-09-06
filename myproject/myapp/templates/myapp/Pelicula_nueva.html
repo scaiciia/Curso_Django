@@ -1,0 +1,12 @@
+<html>
+    <h1>{{pelicula.0}}</h1>
+    <p><strong>Fecha de estreno:</strong> {{pelicula.1}}</p>
+    <p><strong>Para mayores de:</strong> {{pelicula.2}}</p>
+    <p><strong>Fecha de estreno:</strong> 
+        {% if pelicula.3 %}
+            Sí
+        {% else %}
+            No
+        {% endif %}
+    </p>
+</html>

@@ -1,0 +1,57 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+    <h1>Bienvenido a nuestro sitio!</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Talle</th>
+                <th>Color</th>
+                <th>Lisa</th>
+                <th>Género</th>
+            </tr>
+        </thead>
+        {% for remera in remeras %}
+            <tr>
+                <td>
+                    {{ remera.marca }}
+                </td>
+                <td>
+
+                    {% if remera.talle == 1 %}
+                        XS
+                    {% elif remera.talle == 2 %}
+                        S
+                    {% elif remera.talle == 3 %}
+                        M
+                    {% elif remera.talle == 4 %}
+                        L
+                    {% elif remera.talle == 5 %}
+                        XL
+                    {% elif remera.talle == 6 %}
+                        XXL
+                    {% endif %}
+                </td>
+                <td>
+                    {{ remera.color }}
+                </td>
+                <td>{% if remera.lisa == True %}
+                        Sí
+                    {% else %}
+                        No
+                    {% endif %}
+                </td>
+                <td>{% if remera.genero == 1 %}
+                        Hombre
+                    {% elif remera.genero == 2 %}
+                        Mujer
+                    {% elif remera.genero == 3 %}
+                        Unisex
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href= "{% url 'contacto' %}">Ir a contacto</a>
+{% endblock %}

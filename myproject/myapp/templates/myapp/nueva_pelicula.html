@@ -1,0 +1,8 @@
+<html>
+    <h1>Nueva película</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Cargar película">
+    </form>
+</html>

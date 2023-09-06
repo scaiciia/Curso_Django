@@ -1,0 +1,22 @@
+<html>
+    {%load static%}
+<html>
+    <title>Lista de aeropuertos</title>
+    <link rel = "stylesheet" type = "text/css" href = "{% static "myapp/styles.css"%}">
+    <table class = "tabla-cursos">
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Ciudad</td>
+                <td>Pais</td>
+            </tr>
+        </thead>
+        {% for nombre, ciudad, pais in aeropuertos %}
+            <tr>
+                <td>{{ nombre }}</td>
+                <td>{{ ciudad }}</td>
+                <td>{{ pais }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</html>

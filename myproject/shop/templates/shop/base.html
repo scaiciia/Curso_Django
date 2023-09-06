@@ -1,0 +1,13 @@
+{%load static%}
+<html>
+    <head>
+        <title>indumentaria online</title>
+    </head>
+    <body>
+        <main>
+            <a href= "{% url "index"%}"><img src="{% static "shop/logo.png" %}"/></a>
+            {% block content %}
+            {% endblock %}
+        </main>
+    </body>
+</html>

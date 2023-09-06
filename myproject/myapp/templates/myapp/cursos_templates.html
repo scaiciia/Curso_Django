@@ -1,0 +1,19 @@
+{%load static%}
+<html>
+    <title>Lista de cursos</title>
+    <link rel = "stylesheet" type = "text/css" href = "{% static "myapp/styles.css"%}">
+    <table class = "tabla-cursos">
+        <thead>
+            <tr>
+                <th>Curso</th>
+                <th>Inscriptos</th>
+            </tr>
+        </thead>
+        {% for curso in cursos %}
+            <tr>
+                <td>{{ curso.nombre }}</td>
+                <td>{{ curso.inscriptos }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</html>
